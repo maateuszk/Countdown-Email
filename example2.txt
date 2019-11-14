@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Countdown</title>
+	</head>
+
+	<body>
+		<form action ="example2.php" method="post">
+			<label for ="name">Name</label>
+			<input type = "text" name ="name" id="name" /><br/>
+			
+			<label for ="time_end">Time end</label>
+			<input type = "text" name ="time_end" id="time_end" /><br/>
+			
+			<label for ="time_zone">Time zone</label>
+			<input type = "text" name ="time_zone" id="time_zone" /><br/>
+			
+			<label for ="color_text">Color text</label>
+			<input type = "text" name ="color_text" id="color_text" /><br/>
+			
+			<label for ="lang_local">Lang local</label>
+			<input type = "text" name ="lang_local" id="lang_local" /><br/>
+			
+			<label for ="font_size">Font size</label>
+			<input type = "text" name ="font_size" id="font-size" /><br/>
+			
+			<label for ="day">Day</label>
+			<input type = "text" name ="day" id="day" /><br/>
+			
+			<label for ="lang">Lang</label>
+			<input type = "text" name ="lang" id="lang" /><br/>
+			
+			<input type="button" name="sumbit" value="Sumbit"/>
+		</form>
+	</body>
+</html>

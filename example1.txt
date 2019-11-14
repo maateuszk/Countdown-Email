@@ -1,0 +1,47 @@
+<?php
+
+$curl = curl_init();
+
+$dane = array(
+
+	'skin_id' => '1',
+	'name' => 'Letnia wyprzedaz!',
+	'time_end' => '2017-07-25 16:00:00',
+	'time_zone' => 'Poland\/Rzeszow',
+	'color_text'=> 'cc0000',
+	'color_bg' => 'ffffff',
+	'lang_local' => '0',
+	'font_size' => '34',
+	'day' => '1',
+	'lang' => 'pl',
+);
+	
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://countdownmail.com/api/create",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => json_encode($dane),
+  CURLOPT_HTTPHEADER => array(
+    "accept: application/json",
+    "authorization: MjQ0NzozZjEyMmU4MjQ5ODRmMDA=",
+    "cache-control: no-cache",
+    "content-type: application/json",
+    "postman-token: e11a6537-4e6a-663b-2bf9-e492cc7f84eb"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
